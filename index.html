@@ -1,0 +1,37 @@
+<!--
+- Google Search (which must be called index.html).
+- There should be links in the upper-right of the page
+  to go to Image Search or Advanced Search.
+- The user should be able to type in a query,
+  click “Google Search”, and be taken to the Google search
+  results for that page.
+- Your search bar should be centered with rounded corners.
+  The search button should also be centered,
+  and should be beneath the search bar.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Search</title>
+    </head>
+
+    <body>
+        <nav>
+            <a href="images.html">Images</a>
+            <a href="advanced.html">Advanced</a>
+        </nav>
+
+        <main>
+            <form action="https://www.google.com/search">
+
+                <input id="search-input" type="text" name="q" placeholder="Search Google" autocomplete="off">
+                <br>
+                <input type="submit" value="Google Search">
+                <input type="submit" value="I'm Feeling Lucky">
+                
+            </form>
+        </main>
+    </body>
+</html>
