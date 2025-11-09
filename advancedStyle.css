@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 14px;
+}
+
+header {
+    height: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo a{
+    height: 24px;
+    width: 74px;
+}
+
+.logo img {
+    align-items: center;
+    width: 100%;
+    padding-left: 12px;
+}
+ 
+.links a{
+    margin-right: 15px;
+    text-decoration: none;
+    color: #5f6368;
+}
+
+.advance {
+    margin: 25px 35px;
+    font-size: 20px;
+    color: #d93025;
+}
+
+.searchForm {
+    margin: 40px 35px;
+}
