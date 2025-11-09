@@ -12,52 +12,156 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-    <head>
-        <title>Search</title>
-        <style>
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        min-width: 400px;
+      }
 
-            .nav-links {
-                position: absolute;
-                top: 16px;
-                right: 32px;
-                display: flex;
-                gap: 30px;
-            }
+      body {
+        display: block;
+        background: #fff;
+      }
 
-            .nav-links a {
-            color: black;
-            text-decoration: none;
-            font-size: 14px;
-            }
+      body, input, button {
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        color: var(--YLNNHc);
+      }
 
-            .nav-links a:hover,
-            .nav-links a:focus {
-            text-decoration: underline;
-            }
+      .main {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+      }
 
-        </style>
-    </head>
-        </style>
-    </head>
+      .header {
+        display: flex;
+        align-items: center;
+        padding: 6px;
+      }
 
-    <body>
-        <nav class="nav-links" aria-label="Secondary navigation">
-            <a href="images.html">Images</a>
-            <a href="advanced.html">Advanced</a>
-        </nav>
+      .link {
+        display: inline-block;
+        flex-grow: 1;
+      }
 
-        <main>
-            <form action="https://www.google.com/search">
+      div {
+        display: block;
+        unicode-bidi: isolate;
+      }
 
-                <input class = "search input" id="search-input" type="text" name="q" placeholder="Search Google" autocomplete="off">
-                <br>
-                <div>
-                    <input type="submit" value="Google Search">
-                    <input type="submit" value="I'm Feeling Lucky">
+      .linkTo {
+        -webkit-box-pack: end;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
+
+      .goToPage {
+        display: block;
+        padding-right: 11px;
+        padding-top: 12px;
+      }
+
+      .imagePage {
+        display: inline-block;
+        padding-left: 15px;
+      }
+
+      .advancedPage {
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .a {
+        color: rgba(0, 0, 0, .87);
+        display: inline-block;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 24px;
+        text-decoration: none;
+      }
+      
+      .a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .googleLogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .searchForm {
+        padding: 20px;
+      }
+
+      .languages {
+        flex-grow: 1;
+      }
+
+      .footer {
+        flex-shrink: 0;
+        box-sizing: border-box;
+      }
+    </style>
+
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+        <div class="link">
+          <div>
+            <header class="linkTo">
+              <div class="goToPage">
+                <div class="imagePage">
+                  <a class="a" href="images1.html">Images</a>
                 </div>
-                
-            </form>
-        </main>
-    </body>
+                <div class="advancedPage">
+                  <a class="a" href="advanced.html">Advanced</a>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+    </div>
+
+    <div class="googleLogo">
+      <img  style="width: 272px" src="Google_2015_logo.svg.png" alt="Google Logo">
+    </div>
+
+    <div class="searchForm">
+        <form action="https://www.google.com/search" method="get">
+          <div class="input-search">
+            <input type="text" name="q" id="searchInput" placeholder="Google Search">
+          </div>
+        <button type="submit">Google Search</button>
+        <button type="submit">I'm Feeling Lucky</button>
+      </form>
+    </div>
+
+    <div class="languages">
+      <p>Google offered in: 繁體中文 简体中文</p>
+    </div>
+
+    <div class="footer">
+      <p>About Contact Privacy Policy</p>
+    </div>
+  
+    <script>
+        // Your JavaScript goes here
+        console.log('Page loaded successfully!');
+    </script>
+  </div>
+</body>
 </html>
