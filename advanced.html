@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+
+    <style>
+        p {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+        <div class="link">
+          <div>
+            <header class="linkTo">
+              <div class="Page">
+                <div class="imagePage">
+                  <a class="a" href="images.html">Images</a>
+                </div>
+                <div class="advancedPage">
+                  <a class="a" href="advanced.html">Advanced</a>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+    </div>
+
+    <div>
+      <P>Advanced</P>
+    </div>
+
+    <div class="searchForm">
+        <p>Find pages with...</p>
+        <p>To do this in the search box.</p>
+        <form action="https://www.google.com/search" method="get">
+          <div class="input-search">
+            <label for="searchInput">all these words:</label>
+            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <p>Type the important words: tri-colour rat terrier</p>
+          </div>
+          <div class="input-search">
+            <label for="searchInput">this exact word or phrase:</label>
+            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <p>Put exact words in quotes: "rat terrier"</p>
+          </div>
+          <div class="input-search">
+            <label for="searchInput">any of these words:</label>
+            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <p>Type OR between all the words you want: miniature OR standard</p>
+          </div>
+          <div class="input-search">
+            <label for="searchInput">none of these words:</label>
+            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <p>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</p>
+          </div>
+          <div class="input-search">
+            <label for="searchInput">numbers ranging from:</label>
+            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <P>to</P>
+            <label for="searchInput"></label>
+            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <p>Put two full stops between the numbers and add a unit of measurement: 10..35 kg, £300..£500, 2010..2011</p>
+          </div>
+          
+
+          <div class="button-container">
+            <button type="submit">Advanced Search</button>
+          </div>
+      </form>
+    </div>
+
+    <div class="languages">
+      <p>Google offered in: 繁體中文 简体中文</p>
+    </div>
+
+    <div class="footer">
+      <p>About Contact Privacy Policy</p>
+    </div>
+  
+    <script>
+        // Your JavaScript goes here
+        console.log('Page loaded successfully!');
+    </script>
+  </div>
+</body>
+</html>
