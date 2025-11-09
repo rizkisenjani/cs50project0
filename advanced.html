@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
+    <title>Advanced</title>
 
     <style>
         p {
@@ -19,10 +19,10 @@
             <header class="linkTo">
               <div class="Page">
                 <div class="imagePage">
-                  <a class="a" href="images.html">Images</a>
+                  <a class="a" href="image.html">Images</a>
                 </div>
                 <div class="advancedPage">
-                  <a class="a" href="advanced.html">Advanced</a>
+                  <a class="a" href="index.html">search</a>
                 </div>
               </div>
             </header>
@@ -31,7 +31,7 @@
     </div>
 
     <div>
-      <P>Advanced</P>
+      <P style="color: red;">Advanced</P>
     </div>
 
     <div class="searchForm">
@@ -39,37 +39,36 @@
         <p>To do this in the search box.</p>
         <form action="https://www.google.com/search" method="get">
           <div class="input-search">
-            <label for="searchInput">all these words:</label>
-            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <label for="searchInput1">all these words:</label>
+            <input class="searchBox" type="text" name="as_q" id="searchInput1" placeholder="Google Search">
             <p>Type the important words: tri-colour rat terrier</p>
           </div>
           <div class="input-search">
-            <label for="searchInput">this exact word or phrase:</label>
-            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <label for="searchInput2">this exact word or phrase:</label>
+            <input class="searchBox" type="text" name="as_epq" id="searchInput2" placeholder="Google Search">
             <p>Put exact words in quotes: "rat terrier"</p>
           </div>
           <div class="input-search">
-            <label for="searchInput">any of these words:</label>
-            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <label for="searchInput3">any of these words:</label>
+            <input class="searchBox" type="text" name="as_oq" id="searchInput3" placeholder="Google Search">
             <p>Type OR between all the words you want: miniature OR standard</p>
           </div>
           <div class="input-search">
-            <label for="searchInput">none of these words:</label>
-            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <label for="searchInput4">none of these words:</label>
+            <input class="searchBox" type="text" name="as_eq" id="searchInput4" placeholder="Google Search">
             <p>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</p>
           </div>
           <div class="input-search">
             <label for="searchInput">numbers ranging from:</label>
-            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <input class="searchBox" type="text" name="as_nlo" id="searchInput" placeholder="Google Search">
             <P>to</P>
             <label for="searchInput"></label>
-            <input class="searchBox" type="text" name="q" id="searchInput" placeholder="Google Search">
+            <input class="searchBox" type="text" name="as_nhi" id="searchInput" placeholder="Google Search">
             <p>Put two full stops between the numbers and add a unit of measurement: 10..35 kg, £300..£500, 2010..2011</p>
           </div>
-          
 
           <div class="button-container">
-            <button type="submit">Advanced Search</button>
+            <button style="color: white; background-color: blue;" type="submit">Advanced Search</button>
           </div>
       </form>
     </div>
