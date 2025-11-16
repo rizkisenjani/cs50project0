@@ -6,161 +6,82 @@
     <title>Advanced</title>
     <link rel="stylesheet" href="advancedStyle.css">
 
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        font-size: 14px;
-      }
-
-      .grid-container {
-        display: grid;
-        grid-auto-columns: 1fr;
-        grid-auto-rows: auto;
-        grid-template-areas:
-        'header header header header'
-        'title title title title'
-        'main-left main-left main-left main-left'
-        'languages languages languages languages'
-        'footer footer footer footer';
-        background-color: lightpink;
-        gap: 10px;
-      }
-
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
-
-      span {
-        display: inline-block;
-        background-color: #f0f0f0;
-        width: 30%;
-      }
-
-      span-right {
-        display: inline-block;
-        width: 30%;
-      }
-
-      input {
-        display: inline-block;
-        width: 35%;
-      }
-
-      .main-right {
-        padding: 0;
-      }
-
-      @media (max-width: 800px) {
-      .main {
-        margin-left: 15px;
-        width: calc(100%-15px);
-      }
-      .span-right {
-        display: none;
-      }
-    }
-    </style>
 </head>
 <body>
   <div class="grid-container">
     <header style="grid-area: header;">
-    <div class="logo">
-      <a href="www.google.com">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-      </a>
-    </div>
-    <div class="links">
-      <a href="image.html">Images</a>
-      <a href="index.html">search</a>
-    </div>
-  </header>
 
-  <div class="title" style="grid-area: title;">
-    Advanced Search
-  </div>
+      <div class="logo">
+        <a href="www.google.com">
+          <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+        </a>
+      </div>
 
-  <div class="main-left" style="grid-area: main-left;">
+      <div class="links">
+        <a href="image.html">Images</a>
+        <a href="index.html">search</a>
+      </div>
+    </header>
+
+    <div class="title" style="grid-area: title;">
+      Advanced Search
+    </div>
+
+    <div class="main" style="grid-area: main;">
     <ul>
-      <li>
-        <span>Find pages with...</span>
-        <input type="text">
-        <span class="span-right">To do this in the search box.</span>
-      </li>
       <form action="https://www.google.com/search" method="get">
-        <li>
-          <span>all these words:</span>
-          <input type="text" name="as_q">
-        </li>
-        <li>
-          <span>this exact word or phrase:</span>
-          <input type="text" name="as_q"></li>
-        <li>
-          <span>any of these words:</span>
-          <input type="text" name="as_epq">
-        </li>
-        <li>
-          <span>none of these words:</span>
-          <input type="text" name="as_oq">
-        </li>
-        <li>
-          <span>none of these words:</span>
-          <input type="text" name="as_eq">
-        </li>
-        <li>
-          <span>numbers ranging from:</span>
-          <input type="text" name="as_nlo">
-          <span>to</span>
-          <input type="text" name="as_nhi">
-        </li>
-        <li><button style="color: white; background-color: blue;" type="submit">Advanced Search</button></li>
+      <li>
+        <span style="font-size: 14px;"><strong>Find pages with...</strong></span>
+        <div class="input" style="visibility: hidden;"><input type="text"></div>
+        <span class="span-right" style="font-size: 14px;"><strong>To do this in the search box.</strong></span>
+      </li>
+      
+      <li>
+        <span>all these words:</span>
+        <div class="input"><input type="text" name="as_q"></div>
+        <span class="span-right">Type the important words: tri-colour rat terrier</span>
+      </li>
+      <li>
+        <span>this exact word or phrase:</span>
+        <div class="input"><input type="text" name="as_epq"></div>
+        <span class="span-right">Put exact words in quotes: "rat terrier"</span>
+      </li>
+      <li>
+        <span>any of these words:</span>
+        <div class="input"><input type="text" name="as_oq"></div>
+        <span class="span-right">Type OR between all the words you want: miniature OR standard</span>
+      </li>
+      <li>
+        <span>none of these words:</span>
+        <div class="input"><input type="text" name="as_eq"></div>
+        <span class="span-right">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</span>
+      </li>
+      <li>
+        <span>numbers ranging from:</span>
+        <div class="input">
+          <input class="input-no" type="text" name="as_nlo">
+          <span class="span-middle">to</span>
+          <input class="input-no" type="text" name="as_nhi">
+        </div>
+        <span class="span-right">Put two full stops between the numbers and add a unit of measurement: 10..35 kg, £300..£500, 2010..2011</span>
+      </li>
+      <li>
+        <span></span>
+        <div class="input-button">
+        <button style="color: white; background-color: #4d90fe;" type="submit">Advanced Search</button>
+        </div>
+        <span class="span-right"></span>
+      </li>
       </form>
     </ul>
-  </div>
+    </div>
     
-  <!--<div class="main-right" style="grid-area: main-right;">
-    <ul>
-      <li></li>
-      <li>Type the important words: tri-colour rat terrier</li>
-      <li>Put exact words in quotes: "rat terrier"</li>
-      <li>Type OR between all the words you want: miniature OR standard</li>
-      <li>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</li>
-      <li>Put two full stops between the numbers and add a unit of measurement: 10..35 kg, £300..£500, 2010..2011</li>
-    </ul>
-  </div>-->
-</div>
-</div>
-<div class="languages" style="grid-area: languages;">
-  <p>Google offered in: 繁體中文 简体中文</p>
-</div>
+    <div class="languages" style="grid-area: languages;">
+      <p>Google offered in: 繁體中文 简体中文</p>
+    </div>
 
-  <div class="footer" style="grid-area: footer;">
-    <p>About Contact Privacy Policy</p>
-          </div>
-          <div class="input-search">
-            <label for="searchInput4">none of these words:</label>
-            <input class="searchBox" type="text" name="as_eq" id="searchInput4" placeholder="Google Search">
-            <p>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</p>
-          </div>
-          <div class="input-search">
-            <label for="searchInput">numbers ranging from:</label>
-            <input class="searchBox" type="text" name="as_nlo" id="searchInput" placeholder="Google Search">
-            <P>to</P>
-            <label for="searchInput"></label>
-            <input class="searchBox" type="text" name="as_nhi" id="searchInput" placeholder="Google Search">
-            <p>Put two full stops between the numbers and add a unit of measurement: 10..35 kg, £300..£500, 2010..2011</p>
-          </div>
-
-          <div class="button-container">
-            <button style="color: white; background-color: blue;" type="submit">Advanced Search</button>
-          </div>
-      </form>
+    <div class="footer" style="grid-area: footer;">
+      <p>About Contact Privacy Policy</p>
     </div>
 
     <script>
