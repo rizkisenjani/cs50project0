@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-  <div class="main">
-    <div class="header">
-        <div class="link">
-          <div>
-            <header class="linkTo">
-              <div class="Page">
-                <div class="imagePage">
-                  <a class="a" href="images1.html">Images</a>
-                </div>
-                <div class="advancedPage">
-                  <a class="a" href="advanced.html">Advanced</a>
-                </div>
-              </div>
-            </header>
-          </div>
-        </div>
-    </div>
 
-    <div class="googleLogoHeight googleLogo ">
-      <div class="logoPosition LogoSize">
+<body>
+    <header>
+      <nav>
+        <a href="images.html">Images</a>
+        <a href="advanced.html">Advanced</a>
+      </nav>
+    </header>
+
+    <div class="main">
+
+      <div class="logo">
         <svg class="logoimg" aria-label="Google" height="92" role="img" viewBox="0 0 272 92" width="272" xmlns="http://www.w3.org/2000/svg">
           <path d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z" fill="#EA4335"></path>
           <path d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z" fill="#FBBC05"></path>
@@ -37,32 +29,54 @@
           </path>
         </svg>
       </div>
-    </div>
 
-    <div class="searchForm">
+      <div class="searchForm">
         <form action="https://www.google.com/search" method="get">
           <div class="input-search">
             <input type="text" name="q" id="searchInput" placeholder="Google Search">
           </div>
           <div class="button-container">
-            <button type="submit">Google Search</button>
-            <button type="submit">I'm Feeling Lucky</button>
+            <button type="submit" name="btnK" value="Google Search">Google Search</button>
+            <button type="submit" name="btnI" value="I'm Feeling Lucky">I'm Feeling Lucky</button>
           </div>
-      </form>
+        </form>
+      </div>
+
+      <div class="languages">
+        Google offered in: 繁體中文 简体中文
+      </div>
+
     </div>
 
-    <div class="languages">
-      <p>Google offered in: 繁體中文 简体中文</p>
-    </div>
+    <footer>
 
-    <div class="footer">
-      <p>About Contact Privacy Policy</p>
-    </div>
-  
+      <div>
+        Hong Kong
+      </div>
+
+      <div class="footer-content">
+
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+                <a href="#">How Search works</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Settings</a>
+            </div>
+
+        </div>
+
+    </footer>
+
     <script>
         // Your JavaScript goes here
         console.log('Page loaded successfully!');
     </script>
-  </div>
+
 </body>
 </html>
