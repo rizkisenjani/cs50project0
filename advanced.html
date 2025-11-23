@@ -3,90 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced</title>
-    <link rel="stylesheet" href="advancedStyle.css">
+    <title> Google Advanced 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        html, body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: start;
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 48px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 8px;
+            margin-top: 10px;
+        }
+
+        .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+        }
+
+        .logo img {
+            align-self: center;
+            width: 86px;
+            height: 24px;
+            padding-left: 12px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding-right: 12px;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: #5f6368;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        .main .advanceSearch {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: rgb(231, 53, 53);
+            font-size: 20px;
+            padding: 20px 35px;
+            border-bottom: 1px solid #dadde3;
+        }
+
+        .main  form {
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            padding: 20px 35px;
+            gap: 10px;
+        }
+
+        p {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .start {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+            width: 167px;
+            height: 42px;
+        }
+
+        .main form p input {
+            width: 50%;
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 1;
+            flex-grow: 1;
+            max-width: 500px;
+            height: 30px;
+            padding: 1px 8px;
+        }
+
+        .main form p input:focus {
+            outline: none;  /* Remove default focus outline */
+            border: 1px solid rgb(45, 115, 244);
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 
+                0 0 0 1px rgba(45, 115, 244, 0.5);
+        }
+
+        .end {
+            display: inline-flex;
+            align-items: center;
+            font-size: 11px;
+            color: #5f6368;
+            flex-shrink: 0;
+            width: 200px;
+            height: 42px;
+        }
+
+        .main form .button-container {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .main form .button-container .buttons {
+            width: 50%;
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 1;
+            flex-grow: 1;
+            max-width: 500px;
+            height: 30px;
+            padding: 1px 0;
+        }
+
+        .main form .button-container .buttons button {
+            background-color: rgb(30, 132, 241);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 9px 12px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: auto;
+        }
+
+        footer {
+            width: 100%;
+            background-color: rgb(242, 242, 242);
+            font-size: 13px;
+            color: #5f6368;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        footer .location{
+            width: 100%;
+            border-bottom: 1px solid #5f6368;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 15px 30px;
+            font-size: 16px;
+        }
+
+        footer .content-container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 20px;
+            
+        }
+
+        footer .content-container .footer-links{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        footer .content-container .footer-links a {
+            padding: 15px;
+            text-decoration: none;
+            color: #5f6368;
+        }
+
+        footer .content-container .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
 </head>
+
 <body>
-  <div class="grid-container">
-    <header style="grid-area: header;">
-
-      <div class="logo">
-        <a href="www.google.com">
-          <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-        </a>
-      </div>
-
-      <div class="links">
-        <a href="image.html">Images</a>
-        <a href="index.html">search</a>
-      </div>
+    <header>
+        <div class="logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+        </div>
+        <nav>
+             <a href="index.html">search</a>
+             <a href="images.html">images</a>
+        </nav>
     </header>
-
-    <div class="title" style="grid-area: title;">
-      Advanced Search
-    </div>
-
-    <div class="main" style="grid-area: main;">
-    <ul>
-      <form action="https://www.google.com/search" method="get">
-      <li>
-        <span style="font-size: 14px;"><strong>Find pages with...</strong></span>
-        <div class="input" style="visibility: hidden;"><input type="text"></div>
-        <span class="span-right" style="font-size: 14px;"><strong>To do this in the search box.</strong></span>
-      </li>
-      
-      <li>
-        <span>all these words:</span>
-        <div class="input"><input type="text" name="as_q"></div>
-        <span class="span-right">Type the important words: tri-colour rat terrier</span>
-      </li>
-      <li>
-        <span>this exact word or phrase:</span>
-        <div class="input"><input type="text" name="as_epq"></div>
-        <span class="span-right">Put exact words in quotes: "rat terrier"</span>
-      </li>
-      <li>
-        <span>any of these words:</span>
-        <div class="input"><input type="text" name="as_oq"></div>
-        <span class="span-right">Type OR between all the words you want: miniature OR standard</span>
-      </li>
-      <li>
-        <span>none of these words:</span>
-        <div class="input"><input type="text" name="as_eq"></div>
-        <span class="span-right">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</span>
-      </li>
-      <li>
-        <span>numbers ranging from:</span>
-        <div class="input">
-          <input class="input-no" type="text" name="as_nlo">
-          <span class="span-middle">to</span>
-          <input class="input-no" type="text" name="as_nhi">
-        </div>
-        <span class="span-right">Put two full stops between the numbers and add a unit of measurement: 10..35 kg, £300..£500, 2010..2011</span>
-      </li>
-      <li>
-        <span></span>
-        <div class="input-button">
-        <button style="color: white; background-color: #4d90fe;" type="submit">Advanced Search</button>
-        </div>
-        <span class="span-right"></span>
-      </li>
-      </form>
-    </ul>
-    </div>
     
-    <div class="languages" style="grid-area: languages;">
-      <p>Google offered in: 繁體中文 简体中文</p>
+    <div class="main">
+        <div class="advanceSearch">Advance Search</div>
+
+            <form action="https://www.google.com/search" method="get">
+                <p><span class="start" style="font-size: 16px;">Find pages with...</span><input type="text" style="visibility: hidden;"><span class="eend" style="font-size: 14px; font-weight: 700; color: #5f6368;">To do this in the search box.</span></p>
+                <p><span class="start">all of this words:</span><input type="text" name="as_q" ><span class="end">Type the important words: tri-colour rat terrier</span></p>
+                <p>
+                    <span class="start">this exact word or phrase:</span>
+                    <input type="text" name="as_epq">
+                    <span class="end">Put exact words in quotes: "rat terrier" </span>
+                </p>
+                <p>
+                    <span class="start">any of these words:</span>
+                    <input type="text" name="as_oq">
+                    <span class="end">Type OR between all the words you want: miniature OR standard</span>
+                </p>
+                <p>
+                    <span class="start">none of these words:</span>
+                    <input type="text" name="as_eq">
+                    <span class="end">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</span>
+                </p>
+                <div class="button-container">
+                    <span class="start"></span>
+                    <div class="buttons"><button type="submit">Advanced Search</button></div>
+                    <span class="end"></span>
+                </div>
+            </form>
+            
     </div>
 
-    <div class="footer" style="grid-area: footer;">
-      <p>About Contact Privacy Policy</p>
-    </div>
+    <footer>
+        <div class="location">
+            Hong Kong
+        </div>
 
-    <script>
-        // Your JavaScript goes here
-        console.log('Page loaded successfully!');
-    </script>
+        <div class="content-container">
+
+            <div class="footer-links">
+                <a href="https://support.google.com/websearch/?visit_id=638994097938724135-3236378936&hl=en-HK&rd=2#topic=3378866">Help</a>
+                <a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
+                <a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
+            </div>
+
+    </footer>
+    
 </body>
-</html>                
+</html>
+
