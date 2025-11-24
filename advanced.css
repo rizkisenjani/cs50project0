@@ -206,7 +206,7 @@ footer .content-container .footer-links a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .end {
         display: none;
     }
