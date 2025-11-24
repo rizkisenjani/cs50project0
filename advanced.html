@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Google Advanced 1</title>
+    <title> Google Advanced</title>
+    <link rel="stylesheet" href="advanced.css">
     <style>
         * {
             box-sizing: border-box;
@@ -16,214 +17,6 @@
             font-family: Arial, sans-serif;
             font-size: 14px;
             line-height: 1.6;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-            align-items: start;
-            width: 100%;
-        }
-
-        header {
-            width: 100%;
-            height: 48px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 8px;
-            margin-top: 10px;
-        }
-
-        .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: auto;
-        }
-
-        .logo img {
-            align-self: center;
-            width: 86px;
-            height: 24px;
-            padding-left: 12px;
-        }
-
-        nav {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            padding-right: 12px;
-        }
-
-        nav a{
-            text-decoration: none;
-            color: #5f6368;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .main {
-            width: 100%;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-        }
-
-        .main .advanceSearch {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            color: rgb(231, 53, 53);
-            font-size: 20px;
-            padding: 20px 35px;
-            border-bottom: 1px solid #dadde3;
-        }
-
-        .main  form {
-            width: 100%;
-            display: flex;
-            flex-flow: column nowrap;
-            padding: 20px 35px;
-            gap: 10px;
-        }
-
-        p {
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .start {
-            display: inline-flex;
-            align-items: center;
-            flex-shrink: 0;
-            width: 167px;
-            height: 42px;
-        }
-
-        .main form p input {
-            width: 50%;
-            display: inline-flex;
-            align-items: center;
-            flex-shrink: 1;
-            flex-grow: 1;
-            max-width: 500px;
-            height: 30px;
-            padding: 1px 8px;
-        }
-
-        .main form p input:focus {
-            outline: none;  /* Remove default focus outline */
-            border: 1px solid rgb(45, 115, 244);
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 
-                0 0 0 1px rgba(45, 115, 244, 0.5);
-        }
-
-        .end {
-            display: inline-flex;
-            align-items: center;
-            font-size: 11px;
-            color: #5f6368;
-            flex-shrink: 0;
-            width: 200px;
-            height: 42px;
-        }
-
-        .main form .button-container {
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .main form .button-container .buttons {
-            width: 50%;
-            display: inline-flex;
-            align-items: center;
-            flex-shrink: 1;
-            flex-grow: 1;
-            max-width: 500px;
-            height: 30px;
-            padding: 1px 0;
-        }
-
-        .main form .button-container .buttons button {
-            background-color: rgb(30, 132, 241);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 9px 12px;
-            font-size: 11px;
-            font-weight: bold;
-            margin-left: auto;
-        }
-
-        footer {
-            width: 100%;
-            background-color: rgb(242, 242, 242);
-            font-size: 13px;
-            color: #5f6368;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        footer .location{
-            width: 100%;
-            border-bottom: 1px solid #5f6368;
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 15px 30px;
-            font-size: 16px;
-        }
-
-        footer .content-container{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 0 20px;
-            
-        }
-
-        footer .content-container .footer-links{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 0 20px;
-        }
-
-        footer .content-container .footer-links a {
-            padding: 15px;
-            text-decoration: none;
-            color: #5f6368;
-        }
-
-        footer .content-container .footer-links a:hover {
-            text-decoration: underline;
         }
         
     </style>
@@ -244,27 +37,35 @@
         <div class="advanceSearch">Advance Search</div>
 
             <form action="https://www.google.com/search" method="get">
-                <p><span class="start" style="font-size: 16px;">Find pages with...</span><input type="text" style="visibility: hidden;"><span class="eend" style="font-size: 14px; font-weight: 700; color: #5f6368;">To do this in the search box.</span></p>
-                <p><span class="start">all of this words:</span><input type="text" name="as_q" ><span class="end">Type the important words: tri-colour rat terrier</span></p>
                 <p>
-                    <span class="start">this exact word or phrase:</span>
-                    <input type="text" name="as_epq">
-                    <span class="end">Put exact words in quotes: "rat terrier" </span>
+                  <span class="start" style="font-size: 16px;">Find pages with...</span>
+                  <input type="text" style="visibility: hidden;">
+                  <span class="end" style="font-size: 14px; font-weight: 700; color: #5f6368;">To do this in the search box.</span>
                 </p>
                 <p>
-                    <span class="start">any of these words:</span>
-                    <input type="text" name="as_oq">
-                    <span class="end">Type OR between all the words you want: miniature OR standard</span>
+                  <span class="start">all of this words:</span>
+                  <input type="text" name="as_q" >
+                  <span class="end">Type the important words: tri-colour rat terrier</span>
                 </p>
                 <p>
-                    <span class="start">none of these words:</span>
-                    <input type="text" name="as_eq">
-                    <span class="end">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</span>
+                  <span class="start">this exact word or phrase:</span>
+                  <input type="text" name="as_epq">
+                  <span class="end">Put exact words in quotes: "rat terrier" </span>
+                </p>
+                <p>
+                  <span class="start">any of these words:</span>
+                  <input type="text" name="as_oq">
+                  <span class="end">Type OR between all the words you want: miniature OR standard</span>
+                </p>
+                <p>
+                  <span class="start">none of these words:</span>
+                  <input type="text" name="as_eq">
+                  <span class="end">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</span>
                 </p>
                 <div class="button-container">
-                    <span class="start"></span>
-                    <div class="buttons"><button type="submit">Advanced Search</button></div>
-                    <span class="end"></span>
+                  <span class="start"></span>
+                  <div class="buttons"><button type="submit">Advanced Search</button></div>
+                  <span class="end"></span>
                 </div>
             </form>
             
