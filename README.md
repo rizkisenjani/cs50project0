@@ -1,4 +1,4 @@
-# CS50 Project 0: Google Clone
+# CS50 Project 0: Search
 
 A responsive front-end clone of Google Search, Google Image Search, and Google Advanced Search pages, built with HTML and CSS for the CS50 Web Programming course.
 
